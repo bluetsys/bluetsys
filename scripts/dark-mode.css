@@ -1,0 +1,120 @@
+:root {
+    --bg-color: #e0e0e0;
+    --color: #1a1a1a;
+    --bg-main-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    background: var(--bg-main-color);
+    color: var(--color);
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--bg-color);
+    color: var(--color);
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-left {
+    justify-self: start;
+    text-align: left;
+}
+
+.header-center {
+    justify-self: center;
+    text-align: center;
+}
+
+.header-right {
+    justify-self: end;
+    text-align: right;
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid #1a1a1a;
+    color: inherit;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+main {
+    background-color: var(--bg-main-color);
+    margin-top: 30px;
+    /* 기존 40px → 20px로 줄임 */
+    padding: 20px;
+    min-height: calc(100vh - 70px);
+    box-sizing: border-box;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: var(--bg-color);
+    color: var(--color);
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.footer-left {
+    justify-self: start;
+    text-align: left;
+}
+
+.footer-center {
+    justify-self: center;
+    text-align: center;
+}
+
+.footer-right {
+    justify-self: end;
+    text-align: right;
+}
+
+/* 다크모드 스타일 */
+body.dark-mode {
+    --bg-color: #111111;
+    --color: #ffffff;
+    --bg-main-color: #232323;
+    background: var(--bg-main-color);
+    color: var(--color);
+}
+
+body.dark-mode #theme-toggle {
+    border: 1px solid #fff;
+    background: #232323;
+    color: #fff;
+}
+
+body.dark-mode main {
+    background-color: var(--bg-main-color);
+    color: #fff;
+}
