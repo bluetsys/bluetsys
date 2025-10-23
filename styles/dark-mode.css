@@ -46,7 +46,7 @@ header {
     text-align: right;
 }
 
-#theme-toggle {
+button {
     background: none;
     border: 1px solid #1a1a1a;
     color: inherit;
@@ -56,6 +56,12 @@ header {
     font-size: 14px;
     margin-left: 8px;
     transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+body.dark-mode button {
+    border: 1px solid #fff;
+    background: #232323;
+    color: #fff;
 }
 
 main {
@@ -117,4 +123,5 @@ body.dark-mode #theme-toggle {
 body.dark-mode main {
     background-color: var(--bg-main-color);
     color: #fff;
+
 }
